@@ -14,8 +14,8 @@ public class MagnoliaRecipes : ModSystem
         recipe.AddTile(TileID.MythrilAnvil);
         recipe.Register();
 
-        Recipe A162 = Recipe.Create(ItemID.Gel, 50);
-        A162.AddIngredient(ItemID.SlimeHook);
+        Recipe A162 = Recipe.Create(ItemID.SlimeHook);
+        A162.AddIngredient(ItemID.Gel, 50);
         A162.AddTile(TileID.Solidifier);
         A162.Register();
 
