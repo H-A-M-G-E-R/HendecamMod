@@ -336,7 +336,17 @@ public class MericaRecipes : ModSystem
         gay5.AddIngredient(ItemID.FrostCore);
         gay5.AddIngredient(ItemID.CobaltBar, 10);
         gay5.AddTile(TileID.Anvils);
+        gay5.AddCondition(Condition.NotRemixWorld);
+        gay5.AddDecraftCondition(Condition.NotRemixWorld);
         gay5.Register();
+
+        Recipe gay5r = Recipe.Create(ItemID.SnowballCannon);
+        gay5r.AddIngredient(ItemID.FrostCore);
+        gay5r.AddIngredient(ItemID.CobaltBar, 10);
+        gay5r.AddTile(TileID.Anvils);
+        gay5r.AddCondition(Condition.RemixWorld);
+        gay5r.AddDecraftCondition(Condition.RemixWorld);
+        gay5r.Register();
 
         Recipe recipee = Recipe.Create(ItemID.SanguineStaff);
         recipee.AddIngredient(ItemID.DemoniteBar, 10);
@@ -479,7 +489,17 @@ public class MericaRecipes : ModSystem
         gay6.AddIngredient(ItemID.FrostCore);
         gay6.AddIngredient(ItemID.PalladiumBar, 10);
         gay6.AddTile(TileID.Anvils);
+        gay6.AddCondition(Condition.NotRemixWorld);
+        gay6.AddDecraftCondition(Condition.NotRemixWorld);
         gay6.Register();
+
+        Recipe gay6r = Recipe.Create(ItemID.SnowballCannon);
+        gay6r.AddIngredient(ItemID.FrostCore);
+        gay6r.AddIngredient(ItemID.PalladiumBar, 10);
+        gay6r.AddTile(TileID.Anvils);
+        gay6r.AddCondition(Condition.RemixWorld);
+        gay6r.AddDecraftCondition(Condition.RemixWorld);
+        gay6r.Register();
 
         Recipe gay69 = Recipe.Create(ItemID.ZapinatorOrange);
         gay69.AddIngredient<CyberneticGunParts>();
