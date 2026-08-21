@@ -57,7 +57,7 @@ public class Heartache : ModItem
 
         line = new TooltipLine(Mod, "Face", "Significantly increases life regen while fired")
         {
-            OverrideColor = new Color(255, 255, 255)
+            Color = new Color(255, 255, 255)
         };
         tooltips.Add(line);
 

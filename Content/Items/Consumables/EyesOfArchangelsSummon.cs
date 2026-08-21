@@ -10,7 +10,7 @@ public class EyesOfArchangelsSummon : ModItem
     public override void SetStaticDefaults()
         {
         Item.ResearchUnlockCount = 1;
-        ItemID.Sets.SortingPriorityBossSpawns[Type] = 13;
+        ItemID.Sets.SortingPriorityMiscImportants[Type] = 13;
         }
 
     public override void SetDefaults()
@@ -31,7 +31,7 @@ public class EyesOfArchangelsSummon : ModItem
 
         line = new TooltipLine(Mod, "Face", "Summons the Eyes of the Archangels, the everwatching eyes of god himself")
             {
-            OverrideColor = new Color(155, 0, 0)
+            Color = new Color(155, 0, 0)
             };
         tooltips.Add(line);
         }

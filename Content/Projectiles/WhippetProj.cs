@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using HendecamMod.Content.Buffs;
 using Microsoft.Xna.Framework.Graphics;
+using Terraria;
 using Terraria.GameContent;
+using Terraria.GameContent.Tile_Entities;
 
 namespace HendecamMod.Content.Projectiles;
 
@@ -42,10 +45,10 @@ public class WhippetProj : ModProjectile
         Projectile.damage = (int)(Projectile.damage * 0.66f); // Multihit penalty. Decrease the damage the more enemies the whip hits.
     }
 
-    public override bool PreDraw(ref Color lightColor)
+    public override bool PreDraw(Player player, ref Color lightColor)
     {
         List<Vector2> list = new List<Vector2>();
-        Projectile.FillWhipControlPoints(Projectile, list);
+        Projectile.FillWhipControlPoints(Projectile, list, player);
 
         //Main.DrawWhip_WhipBland(Projectile, list);
         // The code below is for custom drawing.
@@ -110,5 +113,13 @@ public class WhippetProj : ModProjectile
         }
 
         return false;
+    }
+
+    // This hook lets us change how the held projectile looks while a mannequin is holding it.
+    // We set aiStyle to Whip to draw the projectile as if it had the vanilla whip aiStyle.
+    public override bool DisplayDollSettings(Player doll, TEDisplayDoll.DisplayDollPose pose, ref int aiStyle, ref int aiType)
+    {
+        aiStyle = ProjAIStyleID.Whip;
+        return true;
     }
 }

@@ -4,11 +4,6 @@
 // ExampleFlailProjectile is a copy of the Sunfury flail projectile.
 public class FrozenMaceProjectile : ModProjectile
 {
-    public override void SetStaticDefaults()
-    {
-        ProjectileID.Sets.HeldProjDoesNotUsePlayerGfxOffY[Type] = true;
-    }
-
     public override void SetDefaults()
     {
         Projectile.netImportant = true; // This ensures that the projectile is synced when other players join the world.
@@ -51,7 +46,7 @@ public class FrozenMaceProjectile : ModProjectile
     {
         if (Main.rand.NextBool(4))
         {
-            target.AddBuff(BuffID.Frostburn, 180, quiet: false);
+            target.AddBuff(BuffID.Frostburn, 180);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using HendecamMod.Content.Global;
 using HendecamMod.Content.Items;
 using HendecamMod.Content.Items.Accessories;
+using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader.Utilities;
@@ -67,7 +68,7 @@ public class SaltMonster : ModNPC
         npcLoot.Add(ItemDropRule.Common(ItemType<SaltPendant>(), 7));
     }
 
-    public override float SpawnChance(NPCSpawnInfo spawnInfo)
+    public override float SpawnChance(NPC.Spawner spawner)
     {
         if (NPC.downedBoss1 & NPC.downedSlimeKing)
         {

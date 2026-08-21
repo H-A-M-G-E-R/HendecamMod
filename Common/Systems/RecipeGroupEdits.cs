@@ -11,13 +11,9 @@ namespace HendecamMod.Common.Systems
     {
         public override void AddRecipeGroups()
         {
-            if (RecipeGroup.recipeGroupIDs.ContainsKey("Wood"))
-            {
-                int index = RecipeGroup.recipeGroupIDs["Wood"];
-                RecipeGroup group = RecipeGroup.recipeGroups[index];
-                group.ValidItems.Add(ModContent.ItemType<PoorMahogany>());
-                group.ValidItems.Add(ModContent.ItemType<Pykrete>());
-            }
+            RecipeGroup group = RecipeGroups.Wood;
+            group.ValidItems.Add(ModContent.ItemType<PoorMahogany>());
+            group.ValidItems.Add(ModContent.ItemType<Pykrete>());
         }
     }
 }

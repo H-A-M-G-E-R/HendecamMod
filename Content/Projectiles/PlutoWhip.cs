@@ -1,9 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using HendecamMod.Content.Buffs;
 using HendecamMod.Content.Dusts;
 using Microsoft.Xna.Framework.Graphics;
+using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent;
+using Terraria.GameContent.Tile_Entities;
 
 namespace HendecamMod.Content.Projectiles;
 
@@ -60,7 +63,7 @@ public class PlutoWhip : ModProjectile
         Player owner = Main.player[Projectile.owner];
         Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2; // Without PiOver2, the rotation would be off by 90 degrees counterclockwise.
 
-        Projectile.Center = Main.GetPlayerArmPosition(Projectile) + Projectile.velocity * Timer;
+        Projectile.Center = Main.GetPlayerArmPosition(Projectile, owner) + Projectile.velocity * Timer;
         // Vanilla uses Vector2.Dot(Projectile.velocity, Vector2.UnitX) here. Dot Product returns the difference between two vectors, 0 meaning they are perpendicular.
         // However, the use of UnitX basically turns it into a more complicated way of checking if the projectile's velocity is above or equal to zero on the X axis.
         Projectile.spriteDirection = Projectile.velocity.X >= 0f ? 1 : -1;
@@ -111,10 +114,10 @@ public class PlutoWhip : ModProjectile
         }
     }
 
-    public override bool PreDraw(ref Color lightColor)
+    public override bool PreDraw(Player player, ref Color lightColor)
     {
         List<Vector2> list = new List<Vector2>();
-        Projectile.FillWhipControlPoints(Projectile, list);
+        Projectile.FillWhipControlPoints(Projectile, list, player);
 
         //Main.DrawWhip_WhipBland(Projectile, list);
         // The code below is for custom drawing.
@@ -179,5 +182,13 @@ public class PlutoWhip : ModProjectile
         }
 
         return false;
+    }
+
+    // This hook lets us change how the held projectile looks while a mannequin is holding it.
+    // We set aiStyle to Whip to draw the projectile as if it had the vanilla whip aiStyle.
+    public override bool DisplayDollSettings(Player doll, TEDisplayDoll.DisplayDollPose pose, ref int aiStyle, ref int aiType)
+    {
+        aiStyle = ProjAIStyleID.Whip;
+        return true;
     }
 }

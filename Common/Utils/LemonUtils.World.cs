@@ -67,7 +67,7 @@ public static partial class LemonUtils
             {
                 if (WorldGen.genRand.NextBool(chanceDenominator))
                 {
-                    for (int inventoryIndex = 0; inventoryIndex < Chest.maxItems; inventoryIndex++)
+                    for (int inventoryIndex = 0; inventoryIndex < chest.maxItems; inventoryIndex++)
                     {
                         if (chest.item[inventoryIndex].type == ItemID.None)
                         {

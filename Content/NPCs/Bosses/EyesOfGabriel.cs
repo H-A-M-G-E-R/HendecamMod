@@ -37,14 +37,13 @@ public class EyesOfGabriel : ModNPC
         NPC.noGravity = true;
         NPC.noTileCollide = true;
 
-        NPC.SpawnWithHigherTime(30);
         NPC.boss = true;
         NPC.npcSlots = 10f;
 
         NPC.aiStyle = NPCAIStyleID.Spaazmatism;
         if (!Main.dedServ)
             {
-            Music = MusicID.OtherworldlyBoss2;
+            Music = MusicID.OtherworldBoss2;
             }
         }
 
@@ -78,7 +77,7 @@ public class EyesOfGabriel : ModNPC
 
     public override bool CanHitPlayer(Player target, ref int cooldownSlot)
         {
-        cooldownSlot = ImmunityCooldownID.Bosses;
+        cooldownSlot = ImmunityCooldownID.BossNoCheese;
         return true;
         }
 

@@ -1,16 +1,11 @@
 ﻿using HendecamMod.Content.Dusts;
 using Terraria.Audio;
+using Terraria.GameContent.Tile_Entities;
 
 namespace HendecamMod.Content.Projectiles.Items;
 
 public class SporeSawProj : ModProjectile
 {
-    public override void SetStaticDefaults()
-    {
-        // Prevents jitter when stepping up and down blocks and half blocks
-        ProjectileID.Sets.HeldProjDoesNotUsePlayerGfxOffY[Type] = true;
-    }
-
     public override void SetDefaults()
     {
         Projectile.width = 22;
@@ -21,7 +16,8 @@ public class SporeSawProj : ModProjectile
         Projectile.DamageType = DamageClass.Melee;
         Projectile.ownerHitCheck = true;
         Projectile.aiStyle = 20; // Replace with 20 if you do not want custom code
-        Projectile.hide = true; // Hides the projectile, so it will draw in the player's hand when we set the player's heldProj to this one.
+        Projectile.usesOwnerLight = true;
+        Projectile.drawLayer = ProjectileDrawLayerID.HeldProj; // Draws over the player's body and under the player's hands
     }
 
     // This code is adapted and simplified from aiStyle 20 to use a different dust and more noises. If you want to use aiStyle 20, you do not need to do any of this.
@@ -93,5 +89,13 @@ public class SporeSawProj : ModProjectile
             dust.velocity.X *= 0.5f;
             dust.velocity.Y = -Main.rand.Next(3, 8) * 0.1f;
         }
+    }
+
+    // This hook lets us change how the held projectile looks while a mannequin is holding it.
+    // We set aiStyle to Drill to draw the projectile as if it had the vanilla drill aiStyle.
+    public override bool DisplayDollSettings(Player doll, TEDisplayDoll.DisplayDollPose pose, ref int aiStyle, ref int aiType)
+    {
+        aiStyle = ProjAIStyleID.Drill;
+        return true;
     }
 }

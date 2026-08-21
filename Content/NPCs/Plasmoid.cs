@@ -2,6 +2,7 @@
 using HendecamMod.Content.Dusts;
 using HendecamMod.Content.Global;
 using HendecamMod.Content.Items;
+using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader.Utilities;
@@ -96,7 +97,7 @@ public class Plasmoid : ModNPC
         npcLoot.Add(ItemDropRule.ByCondition(new HardmodeDrop(), ItemType<RadBullet>(), 4, 40, 120));
     }
 
-    public override float SpawnChance(NPCSpawnInfo spawnInfo)
+    public override float SpawnChance(NPC.Spawner spawner)
     {
         if (NPC.downedMechBoss1 & NPC.downedMechBoss2 & NPC.downedMechBoss3 & NPC.downedEmpressOfLight)
         {

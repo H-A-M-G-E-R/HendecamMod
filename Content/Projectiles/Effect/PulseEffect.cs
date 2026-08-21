@@ -1,8 +1,10 @@
 ﻿
 using HendecamMod.Common.Systems.Assets;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.IO;
 using System.Linq;
+using Terraria;
 using Terraria.GameContent;
 using Terraria.Graphics.Shaders;
 
@@ -106,7 +108,7 @@ public class PulseEffect : ModProjectile
         AITimer++;
     }
 
-    public override bool PreDraw(ref Color lightColor)
+    public override bool PreDraw(Player player, ref Color lightColor)
     {
         Texture2D texture = TextureAssets.Projectile[Type].Value;
         Vector2 drawPos = Projectile.Center - Main.screenPosition;
@@ -126,7 +128,7 @@ public class PulseEffect : ModProjectile
         return false;
     }
 
-    public override void PostDraw(Color lightColor)
+    public override void PostDraw(Player player, Color lightColor)
     {
         Main.spriteBatch.End();
         Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, Main.DefaultSamplerState, default, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);

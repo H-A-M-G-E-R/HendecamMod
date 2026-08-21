@@ -38,14 +38,13 @@ public class EyesOfMichael : ModNPC
         NPC.noGravity = true;
         NPC.noTileCollide = true;
 
-        NPC.SpawnWithHigherTime(30);
         NPC.boss = true;
         NPC.npcSlots = 10f;
 
         NPC.aiStyle = NPCAIStyleID.EyeOfCthulhu;
         if (!Main.dedServ)
             {
-            Music = MusicID.OtherworldlyBoss2;
+            Music = MusicID.OtherworldBoss2;
             }
         }
 
@@ -78,7 +77,7 @@ public class EyesOfMichael : ModNPC
 
     public override bool CanHitPlayer(Player target, ref int cooldownSlot)
         {
-        cooldownSlot = ImmunityCooldownID.Bosses;
+        cooldownSlot = ImmunityCooldownID.BossNoCheese;
         return true;
         }
 

@@ -1,5 +1,6 @@
 ﻿using HendecamMod.Content.Items;
 using HendecamMod.Content.Items.Placeables;
+using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader.Utilities;
@@ -55,7 +56,7 @@ public class MorbiumWarrior : ModNPC
         npcLoot.Add(ItemDropRule.Common(ItemType<MorbiumOre>(), 1, 11, 33));
     }
 
-    public override float SpawnChance(NPCSpawnInfo spawnInfo)
+    public override float SpawnChance(NPC.Spawner spawner)
     {
         if (NPC.downedPlantBoss)
         {

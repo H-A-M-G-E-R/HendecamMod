@@ -53,14 +53,13 @@ public partial class PromethiumPlasmoid : ModNPC
         NPC.noGravity = true;
         NPC.noTileCollide = true;
         NPC.value = 10000000;
-        NPC.SpawnWithHigherTime(30);
         NPC.boss = true;
         NPC.npcSlots = 10f;
 
         NPC.aiStyle = -1;
         if (!Main.dedServ)
         {
-            Music = MusicID.OtherworldlyBoss1;
+            Music = MusicID.OtherworldBoss1;
         }
     }
 
@@ -82,7 +81,7 @@ public partial class PromethiumPlasmoid : ModNPC
 
     public override bool CanHitPlayer(Player target, ref int cooldownSlot)
     {
-        cooldownSlot = ImmunityCooldownID.Bosses;
+        cooldownSlot = ImmunityCooldownID.BossNoCheese;
         return true;
     }
 

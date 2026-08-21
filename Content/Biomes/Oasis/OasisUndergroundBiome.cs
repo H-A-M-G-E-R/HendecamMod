@@ -8,7 +8,7 @@ public class OasisUndergroundBiome : ModBiome
     public override ModWaterStyle WaterStyle => GetInstance<OasisWaterStyle>();
     public override ModUndergroundBackgroundStyle UndergroundBackgroundStyle => GetInstance<OasisUndergroundBackgroundStyle>();
     public override CaptureBiome.TileColorStyle TileColorStyle => CaptureBiome.TileColorStyle.Jungle;
-    public override int Music => MusicID.OtherworldlyJungle;
+    public override int Music => MusicID.OtherworldJungle;
     public override int BiomeTorchItemType => ItemType<AstatineTorch>();
     public override int BiomeCampfireItemType => ItemType<AstatineTorch>();
     public override string BestiaryIcon => base.BestiaryIcon;

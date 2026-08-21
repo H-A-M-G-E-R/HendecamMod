@@ -210,12 +210,6 @@ public class Politician : ModNPC
             }*/
     }
 
-    public override void SetChatButtons(ref string button, ref string button2)
-    {
-        // What the chat buttons are when you open up the chat UI
-        button = Language.GetTextValue("LegacyInterface.28");
-    }
-
     public override string GetChat()
     {
         WeightedRandom<string> chat = new WeightedRandom<string>();
@@ -269,12 +263,9 @@ public class Politician : ModNPC
         return false;
     }
 
-    public override void OnChatButtonClicked(bool firstButton, ref string shop)
+    public override void RegisterChatButtons(NPCInteractionList interactions)
     {
-        if (firstButton)
-        {
-            shop = ShopName; // Name of the shop tab we want to open.
-        }
+        interactions.InsertBefore(NPCInteractions.Shop(ShopName), NPCInteractionDatabase.CloseButton);
     }
 
     // Not completely finished, but below is what the NPC will sell

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Terraria;
 
 namespace HendecamMod.Content.Items;
 
@@ -56,12 +57,12 @@ public class PlutoniumTorch : ModItem
         Lighting.AddLight(position, 0.85f, 0.25f, 0.95f);
     }
 
-    public override void PostUpdate()
+    public override void PostUpdate(WorldItem item)
     {
         // Create a white (1.0, 1.0, 1.0) light when the item is in world, and isn't underwater.
-        if (!Item.wet)
+        if (!item.wet)
         {
-            Lighting.AddLight(Item.Center, 0.85f, 0.2f, 0.95f);
+            Lighting.AddLight(item.Center, 0.85f, 0.2f, 0.95f);
         }
     }
 
@@ -73,7 +74,7 @@ public class PlutoniumTorch : ModItem
 
         line = new TooltipLine(Mod, "Face", "")
         {
-            OverrideColor = new Color(255, 255, 255)
+            Color = new Color(255, 255, 255)
         };
         tooltips.Add(line);
 

@@ -28,13 +28,13 @@ public class LuckyCigarette : ModItem
         tooltips.Add(line);
         line = new TooltipLine(Mod, "Face", "Slightly reduces underwater breath time")
         {
-            OverrideColor = new Color(255, 255, 255)
+            Color = new Color(255, 255, 255)
         };
         tooltips.Add(line);
 
         line = new TooltipLine(Mod, "Face", "Also looks really badass")
         {
-            OverrideColor = new Color(255, 255, 255)
+            Color = new Color(255, 255, 255)
         };
         tooltips.Add(line);
        

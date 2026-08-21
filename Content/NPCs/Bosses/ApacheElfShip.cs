@@ -50,7 +50,6 @@ public class ApacheElfShip : ModNPC
         NPC.noGravity = true;
         NPC.noTileCollide = true;
 
-        NPC.SpawnWithHigherTime(30);
         NPC.boss = true;
         NPC.npcSlots = 10f;
 
@@ -58,7 +57,7 @@ public class ApacheElfShip : ModNPC
         if (!Main.dedServ)
         {
             {
-                Music = MusicID.OtherworldlyUGHallow;
+                Music = MusicID.OtherworldUndergroundHallow;
             }
         }
     }
@@ -126,7 +125,7 @@ public class ApacheElfShip : ModNPC
 
     public override bool CanHitPlayer(Player target, ref int cooldownSlot)
     {
-        cooldownSlot = ImmunityCooldownID.Bosses;
+        cooldownSlot = ImmunityCooldownID.BossNoCheese;
         return true;
     }
 

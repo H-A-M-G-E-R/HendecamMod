@@ -1,7 +1,9 @@
 ﻿using HendecamMod.Common.Systems.Assets;
 using HendecamMod.Common.Utils;
+using Microsoft.Xna.Framework;
 using System.IO;
 using System.Linq;
+using Terraria;
 
 namespace HendecamMod.Content.Projectiles.Effect;
 
@@ -104,7 +106,7 @@ public class LaserEffect : ModProjectile
         AITimer++;
     }
 
-    public override bool PreDraw(ref Color lightColor)
+    public override bool PreDraw(Player player, ref Color lightColor)
     {
         if (savedVelocity == Vector2.Zero)
         {

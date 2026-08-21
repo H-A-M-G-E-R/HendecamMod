@@ -88,17 +88,17 @@ public class ShitPissAndCumWand : ModItem
 
         line = new TooltipLine(Mod, "Face", "And worst of all, homing sperm cells")
         {
-            OverrideColor = new Color(255, 255, 255)
+            Color = new Color(255, 255, 255)
         };
         tooltips.Add(line);
         line = new TooltipLine(Mod, "Face", "Makes the user extremely stinky")
         {
-            OverrideColor = new Color(255, 255, 255)
+            Color = new Color(255, 255, 255)
         };
         tooltips.Add(line);
         line = new TooltipLine(Mod, "Face", "Uses 6 Braincells")
         {
-            OverrideColor = new Color(255, 255, 255)
+            Color = new Color(255, 255, 255)
         };
         tooltips.Add(line);
     }

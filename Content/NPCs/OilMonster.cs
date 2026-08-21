@@ -1,5 +1,6 @@
 ﻿using HendecamMod.Content.Items;
 using HendecamMod.Content.Items.Weapons.Summon;
+using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader.Utilities;
@@ -65,7 +66,7 @@ public class OilMonster : ModNPC
         npcLoot.Add(ItemDropRule.Common(ItemID.DarkShard, 49));
     }
 
-    public override float SpawnChance(NPCSpawnInfo spawnInfo)
+    public override float SpawnChance(NPC.Spawner spawner)
     {
         if (Main.hardMode)
         {

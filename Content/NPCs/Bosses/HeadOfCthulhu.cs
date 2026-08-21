@@ -50,7 +50,6 @@ public class HeadOfCthulhu : ModNPC
         NPC.noGravity = true;
         NPC.noTileCollide = true;
 
-        NPC.SpawnWithHigherTime(30);
         NPC.boss = true;
         NPC.npcSlots = 10f;
 
@@ -59,11 +58,11 @@ public class HeadOfCthulhu : ModNPC
         {
             if (Main.hardMode)
             {
-                Music = MusicID.OtherworldlyLunarBoss;
+                Music = MusicID.OtherworldMoonLord;
             }
             else
             {
-                Music = MusicID.OtherworldlyTowers;
+                Music = MusicID.OtherworldLunarPillars;
             }
         }
     }
@@ -81,7 +80,7 @@ public class HeadOfCthulhu : ModNPC
 
     public override bool CanHitPlayer(Player target, ref int cooldownSlot)
     {
-        cooldownSlot = ImmunityCooldownID.Bosses;
+        cooldownSlot = ImmunityCooldownID.BossNoCheese;
         return true;
     }
 

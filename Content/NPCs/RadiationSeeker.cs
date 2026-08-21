@@ -5,6 +5,7 @@ using HendecamMod.Content.Global;
 using HendecamMod.Content.Items;
 using HendecamMod.Content.Items.Accessories;
 using HendecamMod.Content.Items.Placeables;
+using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader.Utilities;
@@ -106,7 +107,7 @@ public class RadiationSeeker : ModNPC
         npcLoot.Add(ItemDropRule.Common(ItemType<PromethiumOre>(), 1, 10, 25));
     }
 
-    public override float SpawnChance(NPCSpawnInfo spawnInfo)
+    public override float SpawnChance(NPC.Spawner spawner)
     {
         if (BossDownedSystem.downedPromethiumPlasmoid)
 

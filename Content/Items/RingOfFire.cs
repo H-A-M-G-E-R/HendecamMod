@@ -42,7 +42,7 @@ public class RingOfFire : ModItem
 
         line = new TooltipLine(Mod, "Face", "Takes up 2 sentry slots")
         {
-            OverrideColor = new Color(255, 255, 255)
+            Color = new Color(255, 255, 255)
         };
         tooltips.Add(line);
     }

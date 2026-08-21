@@ -7,7 +7,10 @@ public class MagnoliaRecipeGroups : ModSystem
     public override void AddRecipeGroups()
 
     {
-        RecipeGroup group = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.DemoniteBar)}", ItemID.DemoniteBar, ItemID.CrimtaneBar);
-        RecipeGroup.RegisterGroup(nameof(ItemID.DemoniteBar), group);
+        RecipeGroup group = RecipeGroup.Register(
+            nameof(ItemID.DemoniteBar),
+            "ItemName.DemoniteBar",
+            ItemID.DemoniteBar, ItemID.CrimtaneBar
+        );
     }
 }

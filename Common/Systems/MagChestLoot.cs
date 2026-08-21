@@ -39,7 +39,7 @@ public class MagChestLoot1 : ModSystem
                 if (WorldGen.genRand.NextBool(3))
                     continue;
                 // Next we need to find the first empty slot for our item
-                for (int inventoryIndex = 0; inventoryIndex < Chest.maxItems; inventoryIndex++)
+                for (int inventoryIndex = 0; inventoryIndex < chest.maxItems; inventoryIndex++)
                 {
                     if (chest.item[inventoryIndex].type == ItemID.None)
                     {
@@ -95,7 +95,7 @@ public class MagChestLoot2 : ModSystem
                 if (WorldGen.genRand.NextBool(3))
                     continue;
                 // Next we need to find the first empty slot for our item
-                for (int inventoryIndex = 0; inventoryIndex < Chest.maxItems; inventoryIndex++)
+                for (int inventoryIndex = 0; inventoryIndex < chest.maxItems; inventoryIndex++)
                 {
                     if (chest.item[inventoryIndex].type == ItemID.None)
                     {

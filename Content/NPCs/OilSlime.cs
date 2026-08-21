@@ -1,6 +1,7 @@
 ﻿using HendecamMod.Content.Global;
 using HendecamMod.Content.Items;
 using HendecamMod.Content.Items.Accessories;
+using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader.Utilities;
@@ -82,7 +83,7 @@ public class OilSlime : ModNPC
         npcLoot.Add(ItemDropRule.Common(ItemID.Rally, 33));
     }
 
-    public override float SpawnChance(NPCSpawnInfo spawnInfo)
+    public override float SpawnChance(NPC.Spawner spawner)
     {
         return SpawnCondition.Underground.Chance * 0.95f;
     }

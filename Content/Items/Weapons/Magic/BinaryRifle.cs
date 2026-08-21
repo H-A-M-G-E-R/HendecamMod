@@ -1,7 +1,9 @@
 ﻿using HendecamMod.Content.Projectiles;
 using HendecamMod.Content.Tiles.Furniture;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
+using Terraria;
 using Terraria.Audio;
 
 namespace HendecamMod.Content.Items.Weapons.Magic;
@@ -46,12 +48,12 @@ public class BinaryRifle : ModItem
     {
         player.GetModPlayer<KingScope>().Scoped = true;
     }
-    public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
+    public override bool PreDrawInWorld(WorldItem item, SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
     {
         scale = 0.725f;
 
-        Texture2D texture = Terraria.GameContent.TextureAssets.Item[Item.type].Value;
-        Vector2 position = Item.position - Main.screenPosition + new Vector2(Item.width / 2, Item.height - texture.Height * 0.5f);
+        Texture2D texture = Terraria.GameContent.TextureAssets.Item[item.type].Value;
+        Vector2 position = item.position - Main.screenPosition + new Vector2(item.width / 2, item.height - texture.Height * 0.5f);
 
         spriteBatch.Draw(texture, position, null, lightColor, rotation, texture.Size() * 0.5f, scale, SpriteEffects.None, 0f);
 
@@ -74,7 +76,7 @@ public class BinaryRifle : ModItem
 
         line = new TooltipLine(Mod, "Face", "Right click to zoom")
         {
-            OverrideColor = new Color(255, 255, 255)
+            Color = new Color(255, 255, 255)
         };
         tooltips.Add(line);
 
