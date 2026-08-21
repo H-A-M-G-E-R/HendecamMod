@@ -99,7 +99,7 @@ public class HendecamDrops : GlobalNPC
             npcLoot.Add(ItemDropRule.Common(ItemType<PlasticScrap>(), 20, 4, 9));
         }
 
-        if (npc.type == NPCID.Nymph)
+        if (npc.type == NPCID.LostGirl || npc.type == NPCID.Nymph)
         {
             npcLoot.Add(ItemDropRule.Common(ItemType<Heartache>(), chanceDenominator: 3));
             npcLoot.Add(ItemDropRule.Common(ItemType<MonsterStemCells>(), 75, 1, 1));
