@@ -17,7 +17,6 @@ public class EyesOfArchangelsSummon : ModItem
         {
         Item.width = 38;
         Item.height = 30;
-        Item.maxStack = 1;
         Item.rare = ItemRarityID.Blue;
         Item.useAnimation = 30;
         Item.useTime = 30;

@@ -11,7 +11,6 @@ public class TungstenCube : ModItem
         Item.height = 26;
         Item.rare = ItemRarityID.Blue;
         Item.value = 54500;
-        Item.maxStack = 1;
         Item.accessory = true;
         Item.defense = 3;
     }

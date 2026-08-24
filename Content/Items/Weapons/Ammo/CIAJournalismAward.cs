@@ -17,7 +17,6 @@ public class CIAJournalismAward : ModItem
         Item.ArmorPenetration = 10;
         Item.width = 16;
         Item.height = 16;
-        Item.maxStack = 1;
         Item.consumable = false; // This marks the item as consumable, making it automatically be consumed when it's used as ammunition, or something else, if possible.
         Item.knockBack = 2.75f;
         Item.value = 3250000;

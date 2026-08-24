@@ -16,7 +16,6 @@ public class AnUnoDeck : ModItem
 
     public override void SetDefaults()
     {
-        Item.maxStack = 1;
         Item.width = 24;
         Item.height = 24;
         Item.rare = ItemRarityID.Expert;

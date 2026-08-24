@@ -15,7 +15,6 @@ public class ZincCube : ModItem
         Item.height = 26; // Hitbox height of the item.
         Item.rare = RarityType<BurntOrange>();
         Item.value = 36250;
-        Item.maxStack = 1;
         Item.accessory = true;
         Item.defense = 3;
         if (ModLoader.TryGetMod("Avalon", out Mod Avalon))

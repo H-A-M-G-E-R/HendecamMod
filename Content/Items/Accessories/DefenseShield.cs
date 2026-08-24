@@ -11,7 +11,6 @@ public class DefenseShield : ModItem
         Item.height = 32; 
         Item.rare = ItemRarityID.Blue; 
         Item.value = 27500;
-        Item.maxStack = 1;
         Item.accessory = true;
         Item.defense = 2;
     }

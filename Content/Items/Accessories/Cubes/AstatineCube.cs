@@ -12,7 +12,6 @@ public class AstatineCube : ModItem
         Item.height = 26; 
         Item.rare = ItemRarityID.Red; 
         Item.value = 1230000;
-        Item.maxStack = 1;
         Item.accessory = true;
         Item.defense = 15;
     }

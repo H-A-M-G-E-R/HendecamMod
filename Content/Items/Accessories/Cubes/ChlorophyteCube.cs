@@ -12,7 +12,6 @@ public class ChlorophyteCube : ModItem
         Item.height = 26; 
         Item.rare = ItemRarityID.Lime; 
         Item.value = 285000;
-        Item.maxStack = 1;
         Item.accessory = true;
         Item.defense = 5;
     }

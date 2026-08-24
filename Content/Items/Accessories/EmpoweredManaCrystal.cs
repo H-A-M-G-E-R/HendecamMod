@@ -37,7 +37,6 @@ public class EmpoweredManaCrystal : ModItem
         Item.height = 32; // Hitbox height of the item.
         Item.rare = ItemRarityID.Green; // The color that the item's name will be in-game.
         Item.value = 35000;
-        Item.maxStack = 1;
         Item.accessory = true;
     }
 

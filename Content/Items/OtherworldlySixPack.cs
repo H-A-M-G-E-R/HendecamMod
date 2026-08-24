@@ -26,7 +26,6 @@ public class OtherworldlySixPack : ModItem
         Item.useTime = 10;
         Item.useTurn = true;
         Item.UseSound = SoundID.Item3;
-        Item.maxStack = 1;
         Item.consumable = true;
         Item.rare = ItemRarityID.Lime;
         Item.value = Item.buyPrice(silver: 11500);

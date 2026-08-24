@@ -16,7 +16,6 @@ public class HeadOfCthulhuSummon : ModItem
     {
         Item.width = 32;
         Item.height = 28;
-        Item.maxStack = 1;
         Item.rare = ItemRarityID.Blue;
         Item.useAnimation = 30;
         Item.useTime = 30;

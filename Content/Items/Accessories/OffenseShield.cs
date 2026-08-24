@@ -12,7 +12,6 @@ public class OffenseShield : ModItem
         Item.height = 32; 
         Item.rare = ItemRarityID.LightPurple;
         Item.value = 750000;
-        Item.maxStack = 1;
         Item.accessory = true;
         Item.defense = 5;
     }

@@ -15,7 +15,6 @@ public class WeedCube : ModItem
         Item.height = 26; // Hitbox height of the item.
         Item.rare = ItemRarityID.Green; // The color that the item's name will be in-game.
         Item.value = 45000;
-        Item.maxStack = 1;
         Item.accessory = true;
         Item.defense = 4;
         Item.lifeRegen = 2;

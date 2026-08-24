@@ -11,7 +11,6 @@ public class GelCube : ModItem
         Item.height = 26;
         Item.rare = ItemRarityID.Blue;
         Item.value = 5000;
-        Item.maxStack = 1;
         Item.accessory = true;
     }
 

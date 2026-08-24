@@ -14,7 +14,6 @@ public class SkeletonKey : ModItem
         Item.scale = 1f;
         Item.rare = ItemRarityID.LightRed; // The color that the item's name will be in-game.
         Item.value = 350000;
-        Item.maxStack = 1;
 
         Item.consumable = false;
     }

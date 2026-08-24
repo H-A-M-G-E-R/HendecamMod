@@ -11,7 +11,6 @@ public class MeteorCube : ModItem
         Item.height = 26; 
         Item.rare = ItemRarityID.Green; 
         Item.value = 87000;
-        Item.maxStack = 1;
         Item.accessory = true;
         Item.defense = 5;
     }

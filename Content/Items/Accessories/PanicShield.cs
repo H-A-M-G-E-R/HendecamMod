@@ -11,7 +11,6 @@ public class PanicShield : ModItem
         Item.height = 32; 
         Item.rare = ItemRarityID.Orange; 
         Item.value = 216000;
-        Item.maxStack = 1;
         Item.accessory = true;
         Item.defense = 3;
     }

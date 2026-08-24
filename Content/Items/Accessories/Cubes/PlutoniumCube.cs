@@ -11,7 +11,6 @@ public class PlutoniumCube : ModItem
         Item.height = 26;
         Item.rare = ItemRarityID.LightPurple;
         Item.value = 645000;
-        Item.maxStack = 1;
         Item.accessory = true;
         Item.defense = 10;
     }

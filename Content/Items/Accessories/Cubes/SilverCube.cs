@@ -14,7 +14,6 @@ public class SilverCube : ModItem
         Item.height = 26; // Hitbox height of the item.
         Item.rare = ItemRarityID.Blue; // The color that the item's name will be in-game.
         Item.value = 37000;
-        Item.maxStack = 1;
         Item.accessory = true;
         Item.defense = 3;
     }
