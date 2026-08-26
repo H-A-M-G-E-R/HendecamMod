@@ -57,6 +57,7 @@ public class RiverBanner : ModItem
         recipe.AddIngredient(ItemID.SeaSnailBanner);
         recipe.AddIngredient(ItemID.SharkBanner);
         recipe.AddIngredient(ItemID.SquidBanner);
+        recipe.AddIngredient(ItemID.OrcaBanner);
         recipe.AddIngredient(ItemID.PossessedArmorBanner);
         recipe.AddIngredient(ItemID.WanderingEyeBanner);
         recipe.AddIngredient(ItemID.WraithBanner);
@@ -151,6 +152,8 @@ public class RiverBanner : ModItem
         recipe.AddIngredient(ItemID.AngryBonesBanner);
         recipe.AddIngredient(ItemID.CursedSkullBanner);
         recipe.AddIngredient(ItemID.SkeletonMageBanner);
+        recipe.AddIngredient(ItemID.LibrarianSkeletonBanner);
+        recipe.AddIngredient(ItemID.WaterBoltMimicBanner);
         recipe.AddIngredient(ItemID.HellArmoredBonesBanner);
         recipe.AddIngredient(ItemID.BlueArmoredBonesBanner);
         recipe.AddIngredient(ItemID.RustyArmoredBonesBanner);
