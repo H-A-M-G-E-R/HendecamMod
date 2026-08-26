@@ -31,7 +31,7 @@ public class AmmoRecycler : ModItem
         Item.useStyle = ItemUseStyleID.Shoot;
         Item.autoReuse = true;
         Item.DamageType = DamageClass.Ranged;
-        Item.damage = 0;
+        Item.damage = 1;
         Item.knockBack = 5.75f;
         Item.noMelee = true;
         Item.ArmorPenetration = 5;
@@ -70,7 +70,7 @@ public class AmmoRecycler : ModItem
         });
 
         // Calculate damage based on ammo
-        int finalDamage = damage * GetAmmoDamageMultiplier(player);
+        int finalDamage = (int)((float)damage * GetAmmoDamageMultiplier(player));
         int originalDamage = finalDamage;
 
         // Create multiple projectiles
@@ -97,53 +97,16 @@ public class AmmoRecycler : ModItem
     }
 
     // Helper method to calculate damage from ammo
-    private int GetAmmoDamageMultiplier(Player player)
+    private float GetAmmoDamageMultiplier(Player player)
     {
-        // Manually calculate total multiplier
-        float totalMultiplier = 1f; // Base 100%
-
-       
-        totalMultiplier += player.GetDamage(DamageClass.Generic).Additive - 1f;
-
-        totalMultiplier += player.GetDamage(DamageClass.Ranged).Additive - 1f;
-
-        // Get all damage classes and check if they should contribute to OmniDamage
-        // OmniDamage gets 67% of specialized class bonuses
-        DamageClass[] specializedClasses = new DamageClass[] {
-        DamageClass.Magic,
-        DamageClass.Melee,
-        
-        DamageClass.Summon,
-        DamageClass.Throwing,
-        GetInstance<StupidDamage>()
-        };
-        foreach (var damageClass in specializedClasses)
-        {
-            // Add 67% of the class's bonus
-            float classBonus = player.GetDamage(damageClass).Additive - 1f;
-            if (classBonus > 0)
-            {
-                totalMultiplier += classBonus * 0.67f;
-            }
-        }
-
-        // Calculate final damage
-
-        int boostedDamage;
-
-
         if (Main.hardMode)
         {
-             boostedDamage = (int)(totalMultiplier * 2.25f);
+            return 2.25f;
         }
         else
         {
-            boostedDamage = (int)(totalMultiplier * 1.75f);
+            return 1.75f;
         }
-
-        if (boostedDamage < 1) boostedDamage = 1;
-
-        return boostedDamage;
     }
 
     public override void HoldItem(Player player)
