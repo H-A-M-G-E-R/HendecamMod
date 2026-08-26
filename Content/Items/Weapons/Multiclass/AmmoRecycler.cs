@@ -47,10 +47,8 @@ public class AmmoRecycler : ModItem
     {
         return Main.rand.NextFloat() >= 0.5f;
     }
-
-    public int currentAmmoType;
    
-   public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
     {
         SoundEngine.PlaySound(new SoundStyle($"{nameof(HendecamMod)}/Assets/Sounds/ThiccShotgun")
         {
