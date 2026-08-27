@@ -183,6 +183,7 @@ public class MericaRecipes : ModSystem
         waess.AddIngredient<UraniumBar>(33);
         waess.AddIngredient<PurifiedSalt>(444);
         waess.AddTile(TileID.MythrilAnvil);
+        waess.DisableDecraft();
         waess.Register();
 
         Recipe wawess = Recipe.Create(ItemID.HolyArrow, 77);
