@@ -84,7 +84,7 @@ public class Alpine : ModNPC
             new Profiles.DefaultNPCProfile(Texture + "_Shimmer", ShimmerHeadIndex, Texture + "_Shimmer_Party")
         );
 
-        NPCID.Sets.FaceEmote[NPC.type] = AlpineEmote;
+        NPCID.Sets.FaceEmote[NPC.type] = EmoteBubbleType<AlpineEmote>();
     }
 
     public override void SetDefaults()

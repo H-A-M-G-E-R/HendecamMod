@@ -90,7 +90,7 @@ public class River : ModNPC
             new Profiles.DefaultNPCProfile(Texture + "_Shimmer", ShimmerHeadIndex, Texture + "_Shimmer_Party")
         );
 
-        NPCID.Sets.FaceEmote[NPC.type] = RiverEmote;
+        NPCID.Sets.FaceEmote[NPC.type] = EmoteBubbleType<RiverEmote>();
     }
 
     public override void SetDefaults()
