@@ -86,7 +86,7 @@ public class Asshole : ModNPC
             new Profiles.DefaultNPCProfile(Texture + "_Shimmer", ShimmerHeadIndex, Texture + "_Shimmer_Party")
         );
 
-        NPCID.Sets.FaceEmote[NPC.type] = YelmutEmote;
+        NPCID.Sets.FaceEmote[NPC.type] = EmoteBubbleType<YelmutEmote>();
     }
 
     public override void SetDefaults()

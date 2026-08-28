@@ -86,7 +86,7 @@ public class Politician : ModNPC
             new Profiles.DefaultNPCProfile(Texture + "_Shimmer", ShimmerHeadIndex, Texture + "_Shimmer_Party")
         );
 
-        NPCID.Sets.FaceEmote[NPC.type] = PoliticianEmote;
+        NPCID.Sets.FaceEmote[NPC.type] = EmoteBubbleType<PoliticianEmote>();
     }
 
     public override void SetDefaults()
