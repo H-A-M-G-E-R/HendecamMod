@@ -1,4 +1,5 @@
 ﻿using HendecamMod.Content.Dusts;
+using HendecamMod.Content.EmoteBubbles;
 using HendecamMod.Content.GlobalNPCs;
 using HendecamMod.Content.Items;
 using HendecamMod.Content.Items.Accessories;
@@ -84,6 +85,8 @@ public class Politician : ModNPC
             new Profiles.DefaultNPCProfile(Texture, NPCHeadLoader.GetHeadSlot(HeadTexture), Texture + "_Party"),
             new Profiles.DefaultNPCProfile(Texture + "_Shimmer", ShimmerHeadIndex, Texture + "_Shimmer_Party")
         );
+
+        NPCID.Sets.FaceEmote[NPC.type] = PoliticianEmote;
     }
 
     public override void SetDefaults()
