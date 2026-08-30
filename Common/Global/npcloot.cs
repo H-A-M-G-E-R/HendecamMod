@@ -38,12 +38,12 @@ public class MagUrLazy : GlobalNPC
 
         if (npc.type == NPCID.ElfCopter)
             {
-            npcLoot.Add(ItemDropRule.Common(ItemType<CandyHeart>(), chanceDenominator: 10));
+            npcLoot.Add(ItemDropRule.Common(ItemType<CandyHeart>(), chanceDenominator: 2));
             }
 
         if (npc.type == NPCID.ElfArcher)
             {
-            npcLoot.Add(ItemDropRule.Common(ItemType<CandyHeart>(), chanceDenominator: 10));
+            npcLoot.Add(ItemDropRule.Common(ItemType<CandyHeart>(), chanceDenominator: 2));
             npcLoot.Add(ItemDropRule.Common(ItemType<CandyCaneCompoundBow>(), chanceDenominator: 20));
             }
         }
