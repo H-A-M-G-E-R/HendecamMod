@@ -503,10 +503,18 @@ public class MericaRecipes : ModSystem
         gay6r.Register();
 
         Recipe gay69 = Recipe.Create(ItemID.ZapinatorOrange);
-        gay69.AddIngredient<CyberneticGunParts>();
         gay69.AddIngredient(ItemID.ZapinatorGray);
-        gay69.AddTile(TileID.MythrilAnvil);
+        gay69.AddIngredient(ItemID.CobaltBar, 10);
+        gay69.AddIngredient(ItemID.OrangeDye);
+        gay69.AddTile(TileID.Anvils);
         gay69.Register();
+
+        Recipe gay694 = Recipe.Create(ItemID.ZapinatorOrange);
+        gay694.AddIngredient(ItemID.ZapinatorGray);
+        gay694.AddIngredient(ItemID.PalladiumBar, 10);
+        gay694.AddIngredient(ItemID.OrangeDye);
+        gay694.AddTile(TileID.Anvils);
+        gay694.Register();
 
         Recipe gay69420 = Recipe.Create(ItemID.ZapinatorGray);
         gay69420.AddIngredient<Items.ZapperGun>();
