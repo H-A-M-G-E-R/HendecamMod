@@ -979,6 +979,11 @@ public class HendecamDrops : GlobalNPC
             npcLoot.Add(ItemDropRule.Common(ItemType<MonsterStemCells>(), 1));
             npcLoot.Add(ItemDropRule.Common(ItemType<MantleBooster>(), chanceDenominator: 1));
         }
+        if (ModLoader.TryGetMod("TheDepths", out Mod TheDepths) && TheDepths.TryFind("ChasmeHeart", out ModNPC ChasmeHeart) && npc.type == ChasmeHeart.Type)
+        {
+            npcLoot.Add(ItemDropRule.Common(ItemType<StupidEmblem>(), chanceDenominator: 4));
+            npcLoot.Add(ItemDropRule.Common(ItemType<MantleBooster>(), chanceDenominator: 1));
+        }
         if (npc.type == NPCID.Demon)
         {
             npcLoot.Add(ItemDropRule.Common(ItemType<FireDiamond>(), 4, 2, 7));
