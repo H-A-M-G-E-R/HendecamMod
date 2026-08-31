@@ -972,14 +972,12 @@ public class HendecamDrops : GlobalNPC
         if (npc.type == NPCID.WallofFlesh)
         {
             npcLoot.Add(ItemDropRule.Common(ItemType<StalingradSpewer>(), chanceDenominator: 3));
-            npcLoot.Add(ItemDropRule.Common(ItemType<StupidEmblem>(), chanceDenominator: 4));
             npcLoot.Add(ItemDropRule.Common(ItemID.Lens, 1, 2, 12));
             npcLoot.Add(ItemDropRule.Common(ItemID.ShadowScale, 2, 10, 25));
             npcLoot.Add(ItemDropRule.Common(ItemID.TissueSample, 2, 10, 25));
             npcLoot.Add(ItemDropRule.Common(ItemType<MonsterStemCells>(), 1));
-            npcLoot.Add(ItemDropRule.Common(ItemType<MantleBooster>(), chanceDenominator: 1));
         }
-        if (ModLoader.TryGetMod("TheDepths", out Mod TheDepths) && TheDepths.TryFind("ChasmeHeart", out ModNPC ChasmeHeart) && npc.type == ChasmeHeart.Type)
+        if (MantiusOreBlessed.IsWOF(npc))
         {
             npcLoot.Add(ItemDropRule.Common(ItemType<StupidEmblem>(), chanceDenominator: 4));
             npcLoot.Add(ItemDropRule.Common(ItemType<MantleBooster>(), chanceDenominator: 1));
