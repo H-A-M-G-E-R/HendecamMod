@@ -1,4 +1,5 @@
-﻿using HendecamMod.Content.Items.Accessories.Rampart;
+﻿using HendecamMod.Content.Global;
+using HendecamMod.Content.Items.Accessories.Rampart;
 using HendecamMod.Content.Items.Consumables;
 using HendecamMod.Content.Items.Weapons.Ranger;
 using HendecamMod.Content.NPCs.Bosses;
@@ -31,7 +32,7 @@ public class MagUrLazy : GlobalNPC
             npcLoot.Add(ItemDropRule.Common(ItemType<LeechRepellant>(), chanceDenominator: 2));
             }
 
-        if (npc.type == NPCID.WallofFlesh)
+        if (MantiusOreBlessed.IsWOF(npc))
             {
             npcLoot.Add(ItemDropRule.Common(ItemID.DemonHeart, 2));
             }
