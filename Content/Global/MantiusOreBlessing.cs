@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Terraria.Chat;
 using Terraria.DataStructures;
 using Terraria.Localization;
+//using ModLiquidLib.ModLoader;
 
 namespace HendecamMod.Content.Global;
 
@@ -10,7 +11,8 @@ public class MantiusOreBlessed : GlobalNPC
 {
     public override bool AppliesToEntity(NPC npc, bool lateInstantiation)
     {
-        return IsWOF(npc);
+        //return IsWOF(npc);
+        return npc.type == NPCID.WallofFlesh;
     }
 
     public static bool IsWOF(NPC npc)
@@ -155,7 +157,8 @@ public class MantiusSystem : ModSystem // manifesto i remember you're vibecoding
             bool foundWoF = false;
             for (int i = 0; i < Main.npc.Length; i++)
             {
-                if (Main.npc[i].active && MantiusOreBlessed.IsWOF(Main.npc[i]))
+                //if (Main.npc[i].active && MantiusOreBlessed.IsWOF(Main.npc[i]))
+                if (Main.npc[i].active && Main.npc[i].type == NPCID.WallofFlesh)
                 {
                     foundWoF = true;
                     break;
@@ -287,6 +290,13 @@ public class MantiusSystem : ModSystem // manifesto i remember you're vibecoding
                 {
                     return true;
                 }
+                /*if (ModLoader.TryGetMod("TheDepths", out Mod TheDepths) && TheDepths.TryFind("Quicksilver", out ModLiquid Quicksilver))
+                {
+                    if (tile.LiquidType == Quicksilver.Type && tile.LiquidAmount > 0)
+                    {
+                        return true;
+                    }
+                }*/
             }
         }
         return false;
