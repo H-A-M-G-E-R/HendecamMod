@@ -61,7 +61,7 @@ public class PlantDrops : GlobalTile
 
         if (ModLoader.TryGetMod("Avalon", out Mod Avalon))
         {
-            if (Avalon.TryFind("ContagionThornyBushes", out ModItem ContagionThornyBushes) && type == ContagionThornyBushes.Type)
+            if (Avalon.TryFind("ContagionThornyBushes", out ModTile ContagionThornyBushes) && type == ContagionThornyBushes.Type)
             {
                 if (!fail && !effectOnly)
                 {
@@ -74,7 +74,7 @@ public class PlantDrops : GlobalTile
                 }
             }
 
-            if (Avalon.TryFind("ContagionVines", out ModItem ContagionVines) && type == ContagionVines.Type)
+            if (Avalon.TryFind("ContagionVines", out ModTile ContagionVines) && type == ContagionVines.Type)
             {
                 if (!fail && !effectOnly)
                 {
@@ -87,7 +87,7 @@ public class PlantDrops : GlobalTile
                 }
             }
 
-            if (Avalon.TryFind("SavannaVines", out ModItem SavannaVines) && type == SavannaVines.Type)
+            if (Avalon.TryFind("SavannaVines", out ModTile SavannaVines) && type == SavannaVines.Type)
             {
                 if (!fail && !effectOnly)
                 {
