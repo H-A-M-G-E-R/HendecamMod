@@ -5579,3 +5579,8 @@ GogBlock: {
 	Tooltip: ""
 	DisplayName: Gog Block
 }
+
+BismuthLongsword: {
+	DisplayName: Bismuth Longsword
+	Tooltip: ""
+}
