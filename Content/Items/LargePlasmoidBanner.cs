@@ -1,5 +1,4 @@
-﻿using HendecamMod.Content.NPCs;
-using HendecamMod.Content.Tiles;
+﻿using HendecamMod.Content.Tiles;
 using Terraria.Enums;
 
 namespace HendecamMod.Content.Items;
@@ -8,7 +7,7 @@ public class LargePlasmoidBanner : ModItem
 {
     public override void SetStaticDefaults()
     {
-        ItemID.Sets.KillsToBanner[NPCType<LargePlasmoid>()] = 25;
+        ItemID.Sets.KillsToBanner[Type] = 25;
     }
 
     public override void SetDefaults()
