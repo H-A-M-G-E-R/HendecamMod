@@ -1,5 +1,4 @@
 ﻿using HendecamMod.Content.Items.Placeables;
-using HendecamMod.Content.NPCs;
 using HendecamMod.Content.Rarities;
 using HendecamMod.Content.Tiles;
 using HendecamMod.Content.Tiles.Furniture;
@@ -11,7 +10,7 @@ public class RiverBanner : ModItem
 {
     public override void SetStaticDefaults()
     {
-        ItemID.Sets.KillsToBanner[NPCType<River>()] = 10;
+        ItemID.Sets.KillsToBanner[Type] = 10;
     }
 
     public override void SetDefaults()
